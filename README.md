@@ -1,4 +1,4 @@
-# Japanse-word-PMI
+# Japanese-word-PMI
 
 Calculate word probabilities and word co-occurrence probabilities from the corpus.  
 The corpus file must consist of one sentence per line
