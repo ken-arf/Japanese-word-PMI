@@ -8,7 +8,7 @@ python word_prob.py -c corpus.txt -n 10000 -lemma
 => prob_data.pkl will be generated
 
 
-Calculate the PMI between word pairs or between the top n words with the highest word PMI
+Calculate the PMI between word pairs or get top n words with the highest word PMI
 
 python get_pmi.py -w1 夏 -w2 海 -d prob_data.pkl
 
