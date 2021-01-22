@@ -10,6 +10,7 @@ lemma = False
 tagger = MeCab.Tagger()
 
 def extract_word(text):
+    global lemma
     text = ''.join(text.split(' '))
     INDEX_CATEGORY = 0
     INDEX_ROOT_FORM = 6
@@ -32,9 +33,11 @@ def extract_word(text):
     return words
 
 def main():
+    global lemma
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', dest='corpus', help='corpus file path')
-    parser.add_argument('-n', dest='numvocab', help='maximum vocabulary size')
+    parser.add_argument('-i', dest='corpus', help='corpus file path', required=True)
+    parser.add_argument('-o', dest='output', help='output file path', required=True)
+    parser.add_argument('-n', dest='numvocab', help='maximum vocabulary size', required=True)
     parser.add_argument('-lemma', dest='lemma', action='store_true', help='apply lemmatization for text')
 
     args = parser.parse_args()
@@ -62,7 +65,8 @@ def main():
     pmi['pxy']=pxy
     pmi['px']=px
     pmi['vocab']=vocab
-    with open('prob_data.pkl','wb') as fp:
+   
+    with open(args.output, 'wb') as fp:
         pickle.dump(pmi, fp)
 
 if __name__ == '__main__':
