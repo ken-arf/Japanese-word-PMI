@@ -3,6 +3,10 @@
 Calculate word probabilities and word co-occurrence probabilities from the corpus.  
 The corpus file must consist of one sentence per line
 
+コーパスから単語の確率と単語の共起確率を計算します。  
+コーパスファイルは、1行に1つの文で構成されている必要があります。
+同じ文内に二つの単語が存在すれば共起としています．　
+
 python word_prob.py -c corpus.txt -n 10000 -lemma
 
 => prob_data.pkl will be generated
