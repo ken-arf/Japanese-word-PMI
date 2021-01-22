@@ -38,7 +38,7 @@ TOP 9: PMI=3.965022400040509    祭り
 
 Get the most likely adjectives to co-occur with 夏 
 
-python get_pmi.py -d prob_data.pkl -w1 夏 -top 60 | cut -f2 | mecab | grep 形容詞
+python get_pmi.py -d prob_data.pkl -w1 夏 -top 60 | cut -f2 | mecab | grep -P "\t形容詞"
 
 涼しい  形容詞,自立,*,*,形容詞・イ段,基本形,涼しい,スズシイ,スズシイ  
 暑い    形容詞,自立,*,*,形容詞・アウオ段,基本形,暑い,アツイ,アツイ 
