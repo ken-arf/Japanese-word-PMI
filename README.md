@@ -24,7 +24,7 @@ optional arguments:
 
 (ex)
 ```
-python word_prob.py -c corpus.txt -o prob_data.pkl -n 10000 -lemma
+python word_prob.py -i corpus.txt -o prob_data.pkl -n 10000 -lemma
 ```
 
 ## Obtain the PMI between a word pairs or get top n words with the highest PMI with a word.
